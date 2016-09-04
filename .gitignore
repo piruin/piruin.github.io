@@ -4,4 +4,4 @@ _site
 
 *.sublime*
 
-Gemfile.lock
+Gemfile*
