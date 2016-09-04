@@ -19,7 +19,6 @@ description: > #
     I'm a fullstack mobile developer who walking in path of software craftmanship,
     For make a great software to client and best workplace to teammate.
 
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://piruin.github.io" # the base hostname & protocol for your site
 twitter_username: piruin
 github_username: piruin
@@ -29,3 +28,5 @@ encoding: utf-8
 timezone: Asia/Bangkok
 markdown: kramdown
 permalink: pretty
+
+exclude: ["sass", ]
