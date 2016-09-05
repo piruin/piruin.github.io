@@ -7,7 +7,7 @@ _site
 .jekyll-metadata
 
 # Ruby
-Gemfile*
+Gemfile.lock
 
 # Sublime
 *.sublime*
