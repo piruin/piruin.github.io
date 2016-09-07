@@ -1,4 +1,5 @@
 # piruin.github.io
+[![Build Status](https://travis-ci.org/piruin/piruin.github.io.svg?branch=master)](https://travis-ci.org/piruin/piruin.github.io)
 My personal blog
 
 ## License
