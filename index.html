@@ -5,7 +5,7 @@ layout: default
 <section class="blog row">
 <h1>Recent Blogs</h1>
 {% for post in site.posts limit:3 %}
-  <article class="col s4">
+  <article class="col s4 card-panel hoverable">
     <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
     <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h3>
     {{ post.excerpt }}
