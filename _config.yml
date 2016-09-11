@@ -12,6 +12,6 @@ github_username: piruin
 encoding: utf-8
 timezone: Asia/Bangkok
 markdown: kramdown
-permalink: pretty
+permalink: /blog/:title/
 
 exclude: ["sass", ]
