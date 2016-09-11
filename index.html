@@ -6,7 +6,6 @@ layout: default
   <h1 class="center-align">{{ site.fullname }}</h1>
   <p class=" center-align">I'm a fullstack mobile developer who walking in path of software craftmanship,<br/>
   To make a great software for client and best workplace for teammate.</p>
-
   <div class="center-align">
   <a class="waves-effect waves-light btn center-align valign">About me</a>
   <div>
@@ -15,7 +14,7 @@ layout: default
 <section class="blog row">
 <h2>Recent Blogs</h2>
 {% for post in site.posts limit:3 %}
-  <article class="col s4 card-panel hoverable">
+  <article class="col s12 m4 card-panel hoverable">
     <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
     <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h3>
     {{ post.excerpt }}
