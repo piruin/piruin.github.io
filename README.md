@@ -1,6 +1,6 @@
-# piruin.github.io
-[![Build Status](https://travis-ci.org/piruin/piruin.github.io.svg?branch=master)](https://travis-ci.org/piruin/piruin.github.io)
-My personal blog
+# piruin.github.io [![Build Status](https://travis-ci.org/piruin/piruin.github.io.svg?branch=master)](https://travis-ci.org/piruin/piruin.github.io)
+
+My personal blog 
 
 ## License
-All content within _posts/ is copyright Piruin Panichphol. Do not reuse any part without written permission.
+Source code under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0), All content within _posts/ under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/).
