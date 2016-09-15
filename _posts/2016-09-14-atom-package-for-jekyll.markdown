@@ -6,7 +6,7 @@ date: '2016-09-14 19:08:16 +0700'
 
 ลงตามนี้แล้วลองใช้เลยครับ
 
-# Package
+## Package
 
 - Jekyll
 - Beautify
@@ -14,6 +14,6 @@ date: '2016-09-14 19:08:16 +0700'
 - Pigments
 - Sublime style column selection
 
-# Another Tool
+## Another Tool
 
 - Lorem Ipsum
