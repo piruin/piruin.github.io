@@ -13,3 +13,6 @@ encoding: utf-8
 timezone: Asia/Bangkok
 markdown: kramdown
 permalink: /blog/:title/
+
+sass:
+  style: compressed
