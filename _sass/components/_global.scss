@@ -11,11 +11,14 @@ body {
   // display: flex;
   // min-height: 100vh;
   // flex-direction: column;
+  background-color: $primary-color-dark;
+  color: #FFF;
 }
 
 main {
   // flex: 1 0 auto;
 }
+
 
 ul {
   &.browser-default,
