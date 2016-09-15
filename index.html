@@ -2,22 +2,26 @@
 layout: default
 ---
 <section style="padding-top:64px;padding-bottom:64px">
-  <p class="center-align">Welcome to my personal website, My name is...</p>
-  <h1 class="center-align">{{ site.fullname }}</h1>
-  <p class="center-align">I don't coding, I craft a software</p>
-  <div class="center-align"><a class="waves-effect waves-light btn">About me</a></div>
+    <p class="center-align">Welcome to my personal website, My name is...</p>
+    <h1 class="center-align">{{ site.fullname }}</h1>
+    <p class="center-align">I don't coding, I craft a software</p>
+    <div class="center-align"><a class="waves-effect waves-light btn">About me</a></div>
 </section>
 
 <section id="recent-blog">
-  <h2>Recent Blogs</h2>
-  <div class="row">
-  {% for post in site.posts limit:3 %}
-    <article class="col s12 m4 card-panel hoverable">
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h3>
-      {{ post.excerpt }}
-    </article>
-  {% endfor %}
-  </div>
-  <div class="right-align"><a class="waves-effect waves-light btn" href="/blog/">More</a></div>
+    <h2>Recent Blogs</h2>
+    <div class="row">
+        {% for post in site.posts limit:3 %}
+        <div class="col s12 m4">
+            <article class="card-panel hoverable" style="padding:24px;">
+                <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+                <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h3>
+                {{ post.excerpt }}
+            </article>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="right-align">
+      <a class="waves-effect waves-light btn" href="/blog/">More</a>
+    </div>
 </section>
