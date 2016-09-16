@@ -27,6 +27,11 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
 }
 
+code {
+	font-weight: 300;
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
 // Header Styles
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 1.25) 0 ($h1-fontsize / 3) 0;}
