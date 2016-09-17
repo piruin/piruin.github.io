@@ -6,6 +6,7 @@ install: gem install jekyll html-proofer
 script:
   - jekyll build
   - htmlproofer ./_site --check-html --check-favicon
+  - java -jar vnu.jar --skip-non-html _site/
 
 env:
   global:
