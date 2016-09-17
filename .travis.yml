@@ -1,6 +1,6 @@
 language: ruby
 rvm: 2.1
-jdk: Oracle JDK 8
+jdk: oraclejdk8
 
 install: gem install jekyll html-proofer
 script:
