@@ -5,7 +5,7 @@ layout: default
 <article class="card-panel">
   <header class="center-align">
     <h1>{{ page.title | escape }}</h1>
-    by <a href={{site.url}} rel="author">{{page.author}}</a>, <time>{{ page.date | date: "%b %-d, %Y" }}</time>
+    by <a href={{site.url}} rel="author">{{page.author}}</a>, <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
   </header>
   {{ content }}
   <footer class="center-align">
