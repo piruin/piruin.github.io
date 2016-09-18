@@ -1,18 +1,20 @@
 title: Blast Piruin
 email: piruin.p@gmail.com
-description: > #
-    I'm a fullstack mobile developer who walking in path of software craftmanship,
-    For make a great software to client and best workplace to teammate.
-url: "http://piruin.github.io" # the base hostname & protocol for your site
-fullname : Piruin Panichphol
-twitter_username: piruin
-github_username: piruin
+description: Thai fullstack mobile developer who walking in path of software craftmanship.
+url: "http://piruin.github.io"
 
 # Build settings
 encoding: utf-8
 timezone: Asia/Bangkok
 markdown: kramdown
 permalink: /blog/:title/
+
+author: Piruin Panichphol
+twitter:
+  username: Piruin
+github:
+  username: piruin
+
 
 sass:
   style: compressed
