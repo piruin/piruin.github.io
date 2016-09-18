@@ -6,18 +6,18 @@ url: "http://piruin.github.io"
 author: Piruin Panichphol
 twitter:
   username: Piruin
-github:
-  username: piruin
-
-
+social:
+  links:
+    - https://www.facebook.com/Piruin.P
+    - https://twitter.com/piruin
+    - https://github.com/piruin
+    - https://www.instagram.com/blastpiruin/
 
 # Build settings
 encoding: utf-8
 timezone: Asia/Bangkok
 markdown: kramdown
 permalink: /blog/:title/
-
-
 
 gems:
   - jekyll-seo-tag
