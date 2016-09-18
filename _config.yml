@@ -3,20 +3,24 @@ email: piruin.p@gmail.com
 description: Thai fullstack mobile developer who walking in path of software craftmanship.
 url: "http://piruin.github.io"
 
-# Build settings
-encoding: utf-8
-timezone: Asia/Bangkok
-markdown: kramdown
-permalink: /blog/:title/
-
 author: Piruin Panichphol
 twitter:
   username: Piruin
 github:
   username: piruin
 
+
+
+# Build settings
+encoding: utf-8
+timezone: Asia/Bangkok
+markdown: kramdown
+permalink: /blog/:title/
+
+
+
 gems:
   - jekyll-seo-tag
-  
+
 sass:
   style: compressed
