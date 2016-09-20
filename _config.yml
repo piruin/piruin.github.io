@@ -26,3 +26,18 @@ gems:
 
 sass:
   style: compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Piruin Panichphol"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"

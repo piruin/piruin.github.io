@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Atom's Package for Jekyll development"
 date: '2016-09-14 19:08:16 +0700'
 ---

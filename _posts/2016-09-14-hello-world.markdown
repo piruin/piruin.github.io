@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Lorem Ipsum"
 date: "2015-09-14 18:09:15 +0700"
 ---
