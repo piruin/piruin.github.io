@@ -3,12 +3,11 @@ email: piruin.p@gmail.com
 description: Thai fullstack mobile developer who walking in path of software craftmanship.
 url: "http://piruin.github.io"
 
-author: Piruin Panichphol
+author: Blast - Piruin Panichphol
 twitter:
   username: Piruin
 social:
   name: พิรุณ พานิชผล
-  type: Person
   links:
     - https://www.facebook.com/Piruin.P
     - https://twitter.com/piruin
@@ -34,7 +33,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Piruin Panichphol"
   -
     scope:
       path: ""

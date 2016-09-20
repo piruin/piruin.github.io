@@ -5,7 +5,12 @@ layout: default
 <article class="card-panel">
   <header class="center-align">
     <h1>{{ page.title | escape }}</h1>
-    by <a href={{site.url}} rel="author">{{page.author}}</a>, <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+    {% if page.author %}
+    by <a href="{{ page.author-url }}" rel="author">{{page.author}}</a>,
+    {% else %}
+    by <a href="/" rel="author">{{ site.author }}</a>,
+    {% endif %}
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
   </header>
   {{ content }}
   <footer class="center-align">
