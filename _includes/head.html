@@ -2,6 +2,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link type="text/css" rel="stylesheet" href="/css/materialize.css" media="screen"/>
+<meta name="author" {% if page.author %}content="{{page.author}}" {% else %}content="{{ site.author }}" {% endif %}/>
 {% seo %}
 {% include favicon.html %}
 <!--[if lt IE 9]>
