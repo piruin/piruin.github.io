@@ -34,6 +34,11 @@ ul {
   }
 }
 
+article > ul > li {
+  list-style-type: disc;
+  margin-left: 36px;
+}
+
 a {
 	color: $link-color;
 	text-decoration: none;
