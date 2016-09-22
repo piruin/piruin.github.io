@@ -1,26 +1,27 @@
 ---
 ---
 <section style="padding-top:64px;padding-bottom:64px">
-    <p class="center-align">I don't coding, I craft software</p>
-    <h1 class="center-align">{{ site.author }}</h1>
-    <p class="center-align">{{ site.description }}</p>
-    <div class="center-align"><a class="waves-effect waves-light btn">About me</a></div>
+  <p class="center-align">I don't coding, I craft software</p>
+  <h1 class="center-align">{{ site.author }}</h1>
+  <p class="center-align">{{ site.description }}</p>
+  {% include social.html %}
+  <div class="center-align"><a class="waves-effect waves-light btn">About me</a></div>
+
 </section>
 
 <section id="recent-blog">
-    <h2>Recent Blogs</h2>
-    <div class="row">
-        {% for post in site.posts limit:3 %}
-        <div class="col s12 m4">
-            <article class="card-panel hoverable" style="padding:24px;">
-                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-                <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h3>
-                {{ post.description }}
-            </article>
-        </div>
-        {% endfor %}
+  <h2>Recent Blogs</h2>
+  <div class="row">
+    {% for post in site.posts limit:3 %}
+    <div class="col s12 m4">
+      <article class="card-panel hoverable" style="padding:24px;">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a></h3> {{ post.description }}
+      </article>
     </div>
-    <div class="right-align">
-      <a class="waves-effect waves-light btn" href="/blog/">More</a>
-    </div>
+    {% endfor %}
+  </div>
+  <div class="right-align">
+    <a class="waves-effect waves-light btn" href="/blog/">More</a>
+  </div>
 </section>
