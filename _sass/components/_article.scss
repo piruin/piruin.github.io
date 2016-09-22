@@ -1,28 +1,28 @@
 article {
-    h2 {
-        padding-bottom: 0.2em;
-        border-bottom: 1px solid $primary-color-light;
-    }
+  h2 {
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid $primary-color-light;
+  }
 
-    ul > li {
-        list-style-type: disc;
-        margin-left: 40px;
-    }
+  ul > li {
+    list-style-type: disc;
+    margin-left: 40px;
+  }
 
-    p > code {
-        padding: 0.2em 0.4em;
-        background-color: $primary-color-dark;
-        border-radius: 3px;
-        font-size: 80%;
-    }
+  p > code {
+    padding: 0.2em 0.4em;
+    background-color: $primary-color-dark;
+    border-radius: 3px;
+    font-size: 80%;
+  }
 
-    pre {
-        padding: 16px;
-        background-color: $primary-color-dark;
-        border-radius: 3px;
-    }
+  pre {
+    padding: 16px;
+    background-color: $primary-color-dark;
+    border-radius: 3px;
+  }
 }
 
 .post {
-    margin-top: 60px;
+  margin-top: 60px;
 }
