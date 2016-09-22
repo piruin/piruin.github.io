@@ -12,7 +12,7 @@ body {
   // min-height: 100vh;
   // flex-direction: column;
   background-color: $primary-color-dark;
-  color: #FFF;
+  color: $primary-text-color;
 }
 
 main {
@@ -353,6 +353,8 @@ ul.staggered-list li {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
+  font-size: 90%;
+  color: $secondary-text-color;
 
   .footer-copyright {
     overflow: hidden;

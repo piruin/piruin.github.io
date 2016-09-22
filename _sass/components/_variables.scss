@@ -42,6 +42,9 @@ $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("indigo", "accent-1") !default;
 
+$primary-text-color: darken(white, 4%) !default;
+$secondary-text-color: darken($primary-text-color, 30%) !default;
+
 
 /* 2. Badges
    ========================================================================== */
