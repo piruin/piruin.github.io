@@ -2,26 +2,27 @@
 permalink: /blog/
 ---
 <h1>Blog</h1>
-<p>All of my published articles at here below. subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<p><a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+<a href="https://twitter.com/Piruin" class="twitter-follow-button" data-show-count="false">Follow @Piruin</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/intent/tweet?screen_name=TwitterDev" class="twitter-mention-button" data-show-count="false">Tweet to @TwitterDev</a>
 {% for post in site.posts %}
    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
    {% if forloop.first %}
-   <section class="card-panel">
-     <h2 id="{{ this_year }}-ref">{{ this_year }}</h2>
-     <ul>
+   <section class="card collection with-header">
+     <h2 class="collection-header" id="{{ this_year }}-ref">{{ this_year }}</h2>
    {% endif %}
-       <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+       <a class="collection-item" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
    {% if forloop.last %}
-     </ul>
+
    </section>
    {% else %}
      {% if this_year != next_year %}
        </ul>
      </section>
-     <section class="card-panel">
-       <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
-       <ul>
+     <section class="card collection with-header">
+       <h2 class="collection-header" id="{{ next_year }}-ref">{{next_year}}</h2>
      {% endif %}
  {% endif %}
 {% endfor %}
