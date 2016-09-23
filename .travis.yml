@@ -2,7 +2,10 @@ language: ruby
 rvm: 2.2
 jdk: oraclejdk8
 
-install: bundle install
+install:
+  - gem update --system
+  - gem --version
+  - bundle install
 script:
   - jekyll build
   - htmlproofer ./_site --check-html --check-favicon
