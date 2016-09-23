@@ -302,7 +302,7 @@ $interval-size: $range / $intervals !default;
 /* 23. Collections
    ========================================================================== */
 
-$collection-border-color: $primary-color-dark !default;
+$collection-border-color: $primary-color-light !default;
 $collection-bg-color: $primary-color !default;
 $collection-active-bg-color: $secondary-color !default;
 $collection-active-color: lighten($secondary-color, 55%) !default;
