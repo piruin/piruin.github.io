@@ -3,21 +3,23 @@ layout: default
 ---
 
 <article class="card-panel post">
-  <header class="center-align">
-    <h1>{{ page.title | escape }}</h1>
-    {% if page.author %}
-    by <a href="{{ page.author-url }}" rel="author">{{page.author}}</a>,
-    {% else %}
-    by <a href="/" rel="author">{{ site.author }}</a>,
-    {% endif %}
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
-  </header>
-  {{ content }}
+<header class="center-align">
+  <h1>{{ page.title | escape }}</h1>
+  {% if page.author %}
+  by <a href="{{ page.author-url }}" rel="author">{{page.author}}</a>,
+  {% else %}
+  by <a href="/" rel="author">{{ site.author }}</a>,
+  {% endif %}
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+</header>
+{{ content }}
 <footer class="row" style="margin-top:60px;">
-  <div class="col s6">
+  <div class="col s6 share">
     <small>Share this</small><br />
-    <a data-size="large" class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="valign-wrapper">
+    {% include share/facebook.html %}
+    {% include share/twitter.html %}
+    </div>
   </div>
   <div class="col s6 right-align">
     <small>License</small><br />
