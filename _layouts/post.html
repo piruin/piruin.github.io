@@ -13,10 +13,18 @@ layout: default
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
   </header>
   {{ content }}
-  <footer class="right-align">
-    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-      <i class="fa fa-creative-commons fa-2x" aria-hidden="true" title="สัญญาอนุญาตของครีเอทีฟคอมมอนส์แบบ แสดงที่มา 4.0"></i>
-      <span class="sr-only">สัญญาอนุญาตของครีเอทีฟคอมมอนส์แบบ แสดงที่มา 4.0</span>
+<footer class="row" style="margin-top:60px;">
+  <div class="col s6">
+    <small>Share this</small><br />
+    <a data-size="large" class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  <div class="col s6 right-align">
+    <small>License</small><br />
+    <a class="right-align" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+    <i class="fa fa-creative-commons fa-2x" aria-hidden="true" title="สัญญาอนุญาตของครีเอทีฟคอมมอนส์แบบ แสดงที่มา 4.0"></i>
+    <span class="sr-only">สัญญาอนุญาตของครีเอทีฟคอมมอนส์แบบ แสดงที่มา 4.0</span>
     </a>
-  </footer>
+  </div>
+</footer>
 </article>
