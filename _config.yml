@@ -27,6 +27,7 @@ permalink: /blog/:title/
 
 gems:
   - jekyll-seo-tag
+  - jekyll-feed
   - jekyll-sitemap
 
 sass:
