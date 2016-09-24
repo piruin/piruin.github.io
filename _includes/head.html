@@ -4,13 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link type="text/css" rel="stylesheet" href="/css/materialize.css" media="screen"/>
 {% seo title=false%}
+{% unless page.tags == empty %}<meta name="keywords" content="{{ page.tags | join: ',' }}"{% endunless %}
 <meta name="author" {% if page.author %}content="{{page.author}}" {% else %}content="{{ site.author }}" {% endif %}/>
 <meta name="robots" content="index, follow">
 {% include favicon.html %}
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-{% if page.url == "/404.html" %}
-<meta http-equiv="refresh" content="5; url=/">
-{% endif %}
+{% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url=/">{% endif %}
 </head>
