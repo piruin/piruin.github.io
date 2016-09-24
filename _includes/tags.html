@@ -1,0 +1,7 @@
+{% unless page.tags == empty %}
+<div class="right-align col s12" style="margin-bottom:-30px;"> Tags
+{% for tag in page.tags %}
+  <div class="chip hoverable"><i class="fa fa-tag fa-fw" aria-hidden="true"></i> {{ tag }}</div>
+{% endfor %}
+</div>
+{% endunless %}
