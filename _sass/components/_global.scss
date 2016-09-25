@@ -349,6 +349,15 @@ ul.staggered-list li {
   }
 }
 
+.billboard {
+  min-height: 400px;
+  padding: 60px 0;
+
+  &.more-padding{
+    padding: 120px 0;
+  }
+}
+
 // Footer
 footer.page-footer {
   margin-top: 20px;
@@ -356,7 +365,7 @@ footer.page-footer {
   font-size: 90%;
   color: $secondary-text-color;
 
-  .footer-copyright {
+  & .footer-copyright {
     overflow: hidden;
     height: 50px;
     line-height: 50px;
