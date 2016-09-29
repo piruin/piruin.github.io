@@ -1,20 +1,13 @@
 ---
-title: About me
-permalink: /about-me/
+title: Curriculum Vitae
 layout: page
 ---
-## Hi I'm Piruin Panichpol
+## Piruin Panichpol
 I design and craft(coding with care) Mobile application, Website, IT System. Also a scrum master of team without certificate.
-
-**Location** Nonthaburi, Thailand
-**Email** piruin.p@gmail.com
 
 ## Personality
 ### At work
 Self reliazed perfectionist. Giving work (and everything decided to do) as best as possible in limitation of resource. Addict to refactoring code. Love automate everything.
-
-### Free time
-I am homebody person. Just love to stay home and craft something and spend time with my lover.
 
 ## Skill
 As fullstack developer
