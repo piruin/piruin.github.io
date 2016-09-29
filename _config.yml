@@ -39,10 +39,12 @@ defaults:
       path: ""
       type: "posts"
     values:
+      language: "en"
       layout: "post"
   -
     scope:
       path: ""
       type: "pages"
     values:
+      language: "en"
       layout: "default"
