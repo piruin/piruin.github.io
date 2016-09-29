@@ -7,7 +7,7 @@ layout: default
   {% if page.author %}
   by <a href="{{ page.author-url }}" rel="author">{{page.author}}</a>,
   {% else %}
-  by <a href="/" rel="author">{{ site.author }}</a>,
+  by <a href="/about" rel="author">{{ site.author }}</a>,
   {% endif %}
   <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
 </header>
