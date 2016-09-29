@@ -1,9 +1,10 @@
 ---
 title: "กำหนด Custom domain ให้กับ Web บน Github Pages"
 tag: github-pages
+description: มาดูกันว่าการตั้งค่า Custom Domain ให้กับ Website บน Github Pages ทำยังไง ง่ายขนาดไหน
 language: th
 ---
-หลังจากทำโครง Web บน Github Pages เริ่มเป็นรูปเป็นร่างแล้ว จะเข้าเว็ปผ่าน piruin.github.io ต่อไปก็รู้สึกมันไม่เท่สักเท่าไหร่ เลยตัดสินใจเช่า Domain piruin.me และลงมือทำ Custom Domain กันสักหน่อย
+หลังจากทำโครง Web บน Github Pages เริ่มเป็นรูปเป็นร่างแล้ว จะเข้าเว็ปผ่าน `piruin.github.io` ต่อไปก็รู้สึกมันไม่เท่สักเท่าไหร่ เลยตัดสินใจเช่า Domain piruin.me และลงมือทำ Custom Domain กันสักหน่อย
 
 > เรื่องนี้ใช้เวลาแป๊บเดียวและไม่ยากครับ แม้แต่มือใหม่เพิ่งมีเว็ปที่จดโดเมนเป็นของตัวเองครั้งแรกแบบผมยังทำได้ภายในครึ่งชั่วโมง
 
