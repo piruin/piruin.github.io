@@ -3,7 +3,6 @@ layout: default
 ---
 <article class="card-panel post">
 <header class="center-align">
-  {% include tags.html %}
   <h1>{{ page.title | escape }}</h1>
   {% if page.author %}
   by <a href="{{ page.author-url }}" rel="author">{{page.author}}</a>,
@@ -14,6 +13,7 @@ layout: default
 </header>
 {{ content }}
 <footer class="row" style="margin-top:60px;">
+  {% include tags.html %}
   <div class="col s6 share">
     <small>Share this</small><br />
     <div class="valign-wrapper">
