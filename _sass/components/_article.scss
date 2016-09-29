@@ -21,6 +21,15 @@ article {
     background-color: $primary-color-dark;
     border-radius: 3px;
   }
+
+  .content {
+    @media only screen and (min-width: 0) {
+        margin: 3rem 0 4rem 0;
+    }
+    @media only screen and (min-width: $medium-screen) {
+        margin: 3rem 1rem 6rem 1rem;
+    }
+  }
 }
 
 .post {

@@ -11,7 +11,9 @@ layout: default
   {% endif %}
   <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
 </header>
+<div class="content">
 {{ content }}
+</div>
 <footer class="row" style="margin-top:60px;">
   {% include tags.html %}
   <div class="col s6 share">
