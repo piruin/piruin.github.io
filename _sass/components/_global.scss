@@ -42,6 +42,13 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+a:hover{
+    color: lighten($link-color, 15%);
+}
+
+a:active{
+    color: lighten($secondary-color, 15%);
+}
 
 // Positioning
 .valign-wrapper {
