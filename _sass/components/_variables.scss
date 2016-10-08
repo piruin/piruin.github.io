@@ -46,6 +46,7 @@ $heading-text-color: white;
 $primary-text-color: rgba(255, 255, 255, 0.82) !default;
 $secondary-text-color: darken($primary-text-color, 30%) !default;
 
+$divider-color: rgba(255, 255, 255, 0.24);
 
 /* 2. Badges
    ========================================================================== */
@@ -230,8 +231,8 @@ $navbar-brand-font-size: 2.1rem !default;
    ========================================================================== */
 
 $sidenav-font-size: 14px !default;
-$sidenav-font-color: rgba(0,0,0,.87) !default;
-$sidenav-bg-color: #fff !default;
+$sidenav-font-color: $primary-text-color !default;
+$sidenav-bg-color: $primary-color !default;
 $sidenav-padding: 16px !default;
 $sidenav-item-height: 48px !default;
 
