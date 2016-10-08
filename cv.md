@@ -1,6 +1,6 @@
 ---
 title: Curriculum Vitae
-layout: page
+layout: default
 ---
 ## Piruin Panichpol
 I design and craft(coding with care) Mobile application, Website, IT System. Also a scrum master of team without certificate.

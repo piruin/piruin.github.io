@@ -1,7 +1,11 @@
 ---
 layout: default
 ---
-<h1>{{ page.title | escape }}</h1>
-<article class="card-panel">
+<article class="center-align billboard">
+<h1>
+    {% if page.icon %}<i class="fa fa-{{ page.icon }} fa-fw {{ page.icon-color}}" aria-hidden="true"></i>{% endif %}
+    {{ page.title }}
+</h1>
+<em>{{ page.subtitle }}</em>
 {{ content }}
 </article>
