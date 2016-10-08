@@ -1,5 +1,17 @@
 .social {
   color: $secondary-text-color;
+  margin: 4px 8px;
+
+  @media #{$small-and-down}  {
+     width: 38px;
+     margin: 8px 4px;
+  }
+
+  &.github {
+    &:hover {
+      color: #6cc644;
+    }
+  }
 
   &.facebook {
     &:hover {
@@ -13,9 +25,15 @@
     }
   }
 
-  &.github {
+  &.instagram {
     &:hover {
-      color: #4078c0;
+      color: #833ab4;
+    }
+  }
+
+  &.linkedin {
+    &:hover {
+      color: #e68523;
     }
   }
 

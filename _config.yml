@@ -14,10 +14,11 @@ twitter:
 social:
   name: พิรุณ พานิชผล
   links:
-    - https://www.facebook.com/piruin
-    - https://twitter.com/piruin
     - https://github.com/piruin
+    - https://twitter.com/piruin
+    - https://www.facebook.com/piruin
     - https://www.instagram.com/blastpiruin/
+    - https://www.linkedin.com/in/piruin
 
 # Build settings
 encoding: utf-8
