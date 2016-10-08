@@ -1,42 +1,45 @@
 ---
 layout: default
 ---
-<article class="card-panel post">
-<header class="center-align">
-  <h1>{{ page.title | escape }}</h1>
-  {% if page.author %}
-  by <a href="{{ page.author-url }}" rel="author">{{page.author}}</a>,
-  {% else %}
-  by <a href="/about" rel="author">{{ site.author }}</a>,
-  {% endif %}
-  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
-</header>
-<div class="content">
-{{ content }}
-</div>
-<footer class="row" style="margin-top:60px;">
-  {% include tags.html %}
-  <div class="col s6 share">
-    <small>Share this</small><br />
-    <div class="valign-wrapper">
-    {% include share/facebook.html %}
-    {% include share/twitter.html %}
+<article class="row margin-top-80">
+  <div class="card-panel hoverable col s12 m8 offset-m2">
+    <header class="center-align">
+      <h1>{{ page.title | escape }}</h1>
+      {% if page.author %}
+      by <a href="{{ page.author-url }}" rel="author">{{page.author}}</a>,
+      {% else %}
+      by <a href="/about" rel="author">{{ site.author }}</a>,
+      {% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+    </header>
+    <div class="content">
+    {{ content }}
     </div>
+    <footer class="row" style="margin-top:60px;">
+      {% include tags.html %}
+      <div class="col s6 share">
+        <small>Share this</small><br />
+        <div class="valign-wrapper">
+        {% include share/facebook.html %}
+        {% include share/twitter.html %}
+        </div>
+      </div>
+      <div class="col s6 right-align">
+        <small>License</small><br />
+        <a class="right-align" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+        <i class="fa fa-creative-commons fa-2x" aria-hidden="true" title="สัญญาอนุญาตของครีเอทีฟคอมมอนส์แบบ แสดงที่มา 4.0"></i>
+        <span class="sr-only">สัญญาอนุญาตของครีเอทีฟคอมมอนส์แบบ แสดงที่มา 4.0</span>
+        </a>
+    </div>
+  </footer>
   </div>
-  <div class="col s6 right-align">
-    <small>License</small><br />
-    <a class="right-align" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-    <i class="fa fa-creative-commons fa-2x" aria-hidden="true" title="สัญญาอนุญาตของครีเอทีฟคอมมอนส์แบบ แสดงที่มา 4.0"></i>
-    <span class="sr-only">สัญญาอนุญาตของครีเอทีฟคอมมอนส์แบบ แสดงที่มา 4.0</span>
-    </a>
+  <div class="row">
+    {% if page.previous.url %}
+    <a class="col s6 m4 offset-m2" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a class="col s6 m4 {% unless page.previous.url %} {{ "offset-s6 offset-m6" }} {% endunless %} next right-align" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+    {% endif %}
   </div>
-</footer>
 </article>
-<div class="post-navigation">
-  {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-  {% endif %}
-  {% if page.next.url %}
-    <a class="next right-align" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-  {% endif %}
-</div>
+

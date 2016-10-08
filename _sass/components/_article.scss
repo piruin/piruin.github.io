@@ -30,28 +30,25 @@ article {
         margin: 3rem 1rem 6rem 1rem;
     }
   }
-}
 
-.post {
-  margin-top: 60px;
+  nav {
+    margin: 0 -15px;
+    font-size: 90%;
+    display: block;
+    width: auto;
+    overflow: hidden;
+
+    a {
+      display: block;
+      width: 50%;
+      float: left;
+      margin: 1em 0;
+    }
+
+  }
 }
 
 .fb-share-button, .twitter-share-button {
     margin-right: 5px;
 }
 
-.post-navigation {
-  margin: 0 -15px;
-  font-size: 90%;
-  display: block;
-  width: auto;
-  overflow: hidden;
-
-  a {
-    display: block;
-    width: 50%;
-    float: left;
-    margin: 1em 0;
-  }
-
-}
