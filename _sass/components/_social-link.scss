@@ -1,0 +1,27 @@
+.social {
+  color: $secondary-text-color;
+
+  &.facebook {
+    &:hover {
+      color: #3b5998;
+    }
+  }
+
+  &.twitter {
+    &:hover {
+      color: #1da1f2;
+    }
+  }
+
+  &.github {
+    &:hover {
+      color: #4078c0;
+    }
+  }
+
+  &.mail {
+    &:hover {
+      color: #d14836;
+    }
+  }
+}
