@@ -360,6 +360,13 @@ ul.staggered-list li {
   padding: 60px 0;
 }
 
+//.margin-top-x
+@for $i from 1 through 4{
+  .margin-top-#{$i * 20} {
+    margin-top: 20px * $i
+  }
+}
+
 // Footer
 footer.page-footer {
   margin-top: 20px;
