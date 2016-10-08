@@ -1,12 +1,11 @@
 ---
-permalink: /blog/
+title: BLOG
+subtitle: Ignorance is the curse of God; knowledge is the wing wherewith we fly to heaven. - William Shakespeare
+icon: book
+layout: page
+social-link: true
 ---
-<article class="row">
-  <header class="col m11 offset-m1">
-  <h1>Blog <i class="fa fa-book fa-fw" aria-hidden="true"></i> </h1>
-  <p>Subscribe <a href={{ "/feed.xml" }}>via RSS  </a><i class="fa fa-rss" aria-hidden="true"></i></p>
-  </header>
-
+<div class="row">
 {% for post in site.posts %}
    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
@@ -25,4 +24,4 @@ permalink: /blog/
      {% endif %}
  {% endif %}
 {% endfor %}
-</article>
+</div>
