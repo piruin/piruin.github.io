@@ -42,6 +42,7 @@ defaults:
     values:
       language: "en"
       layout: "post"
+      comments: true
   -
     scope:
       path: ""

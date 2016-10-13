@@ -41,5 +41,7 @@ layout: default
     <a class="col s6 m4 {% unless page.previous.url %} {{ "offset-s6 offset-m6" }} {% endunless %} next right-align" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
     {% endif %}
   </div>
+  {% if page.comments %}
+  <div class="row"><div class="col m8 offset-m2 margin-top-40">{% include disqus.html %}</div></div>
+  {% endif %}
 </article>
-
