@@ -28,7 +28,9 @@ dependencies {
 
 หลังจากกำหนด Dependency และทำการ Sync Gradle ใหม่แล้ว  เราจะสามารถอ้างถึง Class ต่างๆของ Jetty และ Jersey ได้แล้ว
 
-ต่อไปเราจะทำการให้โปรแกรมของเรา start server เมื่อเราทำการ execute .jar ด้วย code ดังนี้ที่ Class หลักของเรา  หรือก็คือ class ที่มี `public void main(String[] args)`
+ต่อไปเราจะทำการให้โปรแกรมของเรา start server เมื่อเราทำการ execute .jar
+
+ที่ Class หลักของเรา หรือก็คือ class ที่มี `public void main(String[] args)` เพิ่มโค้ดดังนี้
 
 ```java
 public void main(String[] args){
@@ -37,7 +39,7 @@ public void main(String[] args){
 
     ServletHolder jersey = new ServletHolder(new ServletContainer(config));
     jersey.setInitOrder(0);
-    jersey.setInitParameter(“jersey.config.server.provider.classnames”,
+    jersey.setInitParameter("jersey.config.server.provider.classnames",
         SayHello.class.getCanonicalName());
     context.addServlet(jersey , "/*");
 
@@ -56,10 +58,10 @@ public void main(String[] args){
 public class SayHello{
 
      @GET
-     @Path(“/say”)
+     @Path("/say")
      @Produces("text/plain")
      public String say(){
-          return “Hello"
+          return "Hello"
      }
 }
 ```
@@ -77,8 +79,8 @@ public void main(String[] args){
 
     ServletHolder jersey = new ServletHolder(new ServletContainer());
     jersey.setInitOrder(0);
-    jersey.setInitParameter(“jersey.config.server.provider.classnames”,
-        String.join(“, “,
+    jersey.setInitParameter("jersey.config.server.provider.classnames",
+        String.join(", ",
               SayHello.class.getCanonicalName(),
               Second.class.getConicalName(),
               Third.class.getConicalName())
@@ -96,7 +98,7 @@ public void main(String[] args){
 }
 ```
 
-สังเกตสิ่งที่เปลี่ยนแปลงในบรรทัดที่ 7-11 แทนที่เราจะส่งชื่อ class ไป class เดียว เราเอามันมาเชื่อมกันโดยขั้นด้วย `,` แทน 
+สังเกตสิ่งที่เปลี่ยนแปลงในบรรทัดที่ 7-11 แทนที่เราจะส่งชื่อ class ไป class เดียว เราเอามันมาเชื่อมกันโดยขั้นด้วย `,` แทน
 ทีนี้จะมีเพิ่มกี่ class ก็ comma แล้วใส่เพิ่มไปเรื่อยๆได้เลย
 
 ## Return เป็น JSON ด้วย Jackson Media
@@ -106,10 +108,10 @@ public void main(String[] args){
 public class JsonResource{
 
      @GET
-     @Path(“/josn”)
-     @Produces(“application/json")
+     @Path("/josn")
+     @Produces("application/json")
      public Entity fromPojo(){
-          return new Entity(“Say hi, Json”);
+          return new Entity("Say hi, Json");
      }
 
      public class Entity{
@@ -122,7 +124,7 @@ public class JsonResource{
 }
 ```
 
-จริงๆเรื่องมันควรจบง่ายๆแค่นี้ แต่ถ้าเราลองเรียก Service นี้เราจะพบ Internal Server Error 
+จริงๆเรื่องมันควรจบง่ายๆแค่นี้ แต่ถ้าเราลองเรียก Service นี้เราจะพบ Internal Server Error
 ที่เป็นเช่นนี้ เป็นเพราะว่าเราจำเป็นต้อง Register Feature การแปลง POJO เป็น Json ให้ตัว Jersey รู้ก่อน ดังนี้
 
 ที่เพิ่ม Depdency `jersey-media-json-jackson` ที่ build.gradle
@@ -136,7 +138,7 @@ compile "org.glassfish.jersey.media:jersey-media-json-jackson:$jerseyVersion"
 ```java
 ...
 ResourceConfig config = new ResourceConfig();
-config.packages(“you.package.name");
+config.packages("your.package.name");
 config.register(JacksonFeature.class);
 
 ServletHolder jersey = new ServletHolder(new ServletContainer(config));
