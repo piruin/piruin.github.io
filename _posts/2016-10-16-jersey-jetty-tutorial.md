@@ -1,7 +1,7 @@
 ---
 title: Tutorial RESTFul Service by Jersey and Jetty Embedding
 description: วิธีการสร้าง JSON RESTful Service  ด้วย Jersey + Jackson Media และ Embedded Jetty ทำการ Build ด้วย Gradle
-tags: ["Jerseu", "Jetty", "RESTful"]
+tags: ["Jersey", "Jetty", "RESTful"]
 lang: th
 ---
 
@@ -11,7 +11,7 @@ lang: th
 
 ## เริ่มต้นแบบ Basic
 
-เริ่มจากการกำหนด Dependency ใน build.gradle ให้เป็นตามนี้
+เริ่มจากการกำหนด Dependency ใน `build.gradle` ให้เป็นตามนี้
 
 ```groovy
 dependencies {
@@ -26,30 +26,30 @@ dependencies {
 }
 ```
 
-หลังจากกำหนด Dependency และ Sync Gradle ใหม่แล้วเราจะสามารถอ้างถึง Class ต่างๆของ Jetty และ Jersey ได้แล้ว
+หลังจากกำหนด Dependency และทำการ Sync Gradle ใหม่แล้ว  เราจะสามารถอ้างถึง Class ต่างๆของ Jetty และ Jersey ได้แล้ว
 
 ต่อไปเราจะทำการให้โปรแกรมของเรา start server เมื่อเราทำการ execute .jar ด้วย code ดังนี้ที่ Class หลักของเรา  หรือก็คือ class ที่มี `public void main(String[] args)`
 
 ```java
 public void main(String[] args){
-Server server = new Server(2222);
-ServletContextHandler context = new ServletContextHandler(server, "/*");
+    Server server = new Server(2222);
+    ServletContextHandler context = new ServletContextHandler(server, "/*");
 
-ServletHolder jersey = new ServletHolder(new ServletContainer(config));
-jersey.setInitOrder(0);
-jersey.setInitParameter(“jersey.config.server.provider.classnames”,SayHello.class.getCanonicalName());
-context.addServlet(jersey , "/*");
+    ServletHolder jersey = new ServletHolder(new ServletContainer(config));
+    jersey.setInitOrder(0);
+    jersey.setInitParameter(“jersey.config.server.provider.classnames”,SayHello.class.getCanonicalName());
+    context.addServlet(jersey , "/*");
 
-try {
-    server.start();
-    server.join();
-} finnaly {
-    server.destroy();
-}
+    try {
+        server.start();
+        server.join();
+    } finnaly {
+        server.destroy();
+    }
 }
 ```
 
-และเพิ่ม class ที่เป็นตัว Service จริงๆ ในที่นี้เราจะสร้าง `SatHello.class`
+และเพิ่ม class ที่เป็นตัว Service จริงๆ ในที่นี้เราจะสร้าง `SayHello.class`
 
 ```java
 public class SayHello{
@@ -72,26 +72,26 @@ public class SayHello{
 
 ```java
 public void main(String[] args){
-Server server = new Server(2222);
+    Server server = new Server(2222);
 
-ServletHolder jersey = new ServletHolder(new ServletContainer());
-jersey.setInitOrder(0);
-jersey.setInitParameter(“jersey.config.server.provider.classnames”,
-    String.join(“, “,
-          SayHello.class.getCanonicalName(),
-          Second.class.getConicalName(),
-          Third.class.getConicalName())
-    );
+    ServletHolder jersey = new ServletHolder(new ServletContainer());
+    jersey.setInitOrder(0);
+    jersey.setInitParameter(“jersey.config.server.provider.classnames”,
+        String.join(“, “,
+              SayHello.class.getCanonicalName(),
+              Second.class.getConicalName(),
+              Third.class.getConicalName())
+        );
 
-ServletContextHandler context = new ServletContextHandler(server, "/*");
-context.addServlet(jersey , "/*");
+    ServletContextHandler context = new ServletContextHandler(server, "/*");
+    context.addServlet(jersey , "/*");
 
-try {
-    server.start();
-    server.join();
-} finnaly {
-    server.destroy();
-}
+    try {
+        server.start();
+        server.join();
+    } finnaly {
+        server.destroy();
+    }
 }
 ```
 
@@ -99,8 +99,7 @@ try {
 ทีนี้จะมีเพิ่มกี่ class ก็ comma แล้วใส่เพิ่มไปเรื่อยๆได้เลย
 
 ## Return เป็น JSON ด้วย Jackson Media
-ถ้าเราต้องการ Response แบบ `application/json` จาก POJO ดังนี้
-
+ถ้าเราต้องการ Response แบบ `application/json` จาก POJO เราก็ทำดังนี้
 ```java
 public class JsonResource{
 
@@ -122,7 +121,7 @@ public class JsonResource{
 ```
 
 จริงๆเรื่องมันควรจบง่ายๆแค่นี้ แต่ถ้าเราลองเรียก Service นี้เราจะพบ Internal Server Error 
-ที่เป็นเช่นนี้เนื่องจาก เราจำเป็นต้อง Register Feature การแปลง POJO เป็น Json ให้ตัว Jersey รู้ก่อน ดังนี้
+ที่เป็นเช่นนี้ เป็นเพราะว่าเราจำเป็นต้อง Register Feature การแปลง POJO เป็น Json ให้ตัว Jersey รู้ก่อน ดังนี้
 
 ที่เพิ่ม Depdency `jersey-media-json-jackson` ที่ build.gradle
 
@@ -142,4 +141,4 @@ ServletHolder jersey = new ServletHolder(new ServletContainer(config));
 ...
 ```
 
-เท่านี้เมื่อเข้าที่ localhost:2222/json ก็จะได้ JSON ออกมาถึงต้องแล้ว
+เท่านี้เมื่อเข้าที่ `localhost:2222/json` ก็จะได้ Response เป็น JSON ตามที่เราต้องการแล้ว
