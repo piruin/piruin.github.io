@@ -3,7 +3,8 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link type="text/css" rel="stylesheet" href="/css/materialize.css" media="screen"/>
-{% seo title=false%}
+{% if page.layout == 'post' %}<link type="text/css" rel="stylesheet" href="/css/highlight.css" media="screen"/>{% endif %}
+{% seo title=false %}
 {% unless page.tags == empty %}<meta name="keywords" content="{{ page.tags | join: ',' }}"/>{% endunless %}
 <meta name="author" {% if page.author %}content="{{page.author}}" {% else %}content="{{ site.author }}" {% endif %}/>
 <meta name="robots" content="index, follow">

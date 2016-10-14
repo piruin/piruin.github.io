@@ -24,6 +24,8 @@ social:
 encoding: utf-8
 timezone: Asia/Bangkok
 markdown: kramdown
+highlighter: rouge
+
 permalink: /blog/:title/
 
 gems:
