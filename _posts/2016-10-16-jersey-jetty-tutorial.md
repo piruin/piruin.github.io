@@ -37,7 +37,8 @@ public void main(String[] args){
 
     ServletHolder jersey = new ServletHolder(new ServletContainer(config));
     jersey.setInitOrder(0);
-    jersey.setInitParameter(“jersey.config.server.provider.classnames”,SayHello.class.getCanonicalName());
+    jersey.setInitParameter(“jersey.config.server.provider.classnames”,
+        SayHello.class.getCanonicalName());
     context.addServlet(jersey , "/*");
 
     try {
@@ -49,7 +50,7 @@ public void main(String[] args){
 }
 ```
 
-และเพิ่ม class ที่เป็นตัว Service จริงๆ ในที่นี้เราจะสร้าง `SayHello.class`
+และเพิ่ม class ที่เป็นตัว Service จริงๆ ในที่นี้เราจะสร้าง `SayHello.class` มีหน้าตาดังนี้
 
 ```java
 public class SayHello{
@@ -100,6 +101,7 @@ public void main(String[] args){
 
 ## Return เป็น JSON ด้วย Jackson Media
 ถ้าเราต้องการ Response แบบ `application/json` จาก POJO เราก็ทำดังนี้
+
 ```java
 public class JsonResource{
 
@@ -141,4 +143,4 @@ ServletHolder jersey = new ServletHolder(new ServletContainer(config));
 ...
 ```
 
-เท่านี้เมื่อเข้าที่ `localhost:2222/json` ก็จะได้ Response เป็น JSON ตามที่เราต้องการแล้ว
+เพียงเท่านี้ เมื่อเข้าที่ `localhost:2222/json` ก็จะได้ Response เป็น JSON ตามที่เราต้องการแล้ว
