@@ -8,7 +8,51 @@
     </div>
   </div>
   <h1>Blast <strong>Piruin Panichphol</strong></h1>
-  <p>Thai fullstack mobile developer who walking in path of software craftmanship.</p>
+  <p>Thai
+    <style>
+    .hidden{
+      display: none;
+    }
+
+    .visible{
+      animation: zoomIn 1s;
+      -webkit-animation: zoomIn 1s;
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+    </style>
+    <span class="piruin-changing-title">
+      <strong class="visible">Full-Stack developer,</strong>
+      <strong class="hidden">UX Designer,</strong>
+      <strong class="hidden">Android developer,</strong>
+      <strong class="hidden">Software Architecture,</strong>
+      <strong class="hidden">Technical Coach,</strong>
+      <strong class="hidden">Scrum Master,</strong>
+    </span>
+    <script>
+        (function(){
+            document.addEventListener('DOMContentLoaded', function(){
+                var children = document.getElementsByClassName('piruin-changing-title')[0].children;
+                var length = children.length;
+                var idx = 0;
+                setInterval(function(){
+                    children[idx].className = "hidden";
+                    idx = (idx + 1) % length;
+                    children[idx].className = "visible";
+                }, 5000);
+            });
+        })();
+    </script>
+    who walking in path of software craftmanship.</p>
   {% include social.html %}
   <div class="center-align margin-top-20"><a href="/about/" class="waves-effect waves-light btn">About me</a></div>
 </section>
