@@ -2,7 +2,7 @@ title: Blast Piruin Panichphol
 email: piruin.p@gmail.com
 description: >
   Piruin Panichphol or Blast is Thai Full-Stack Android developer,
-  Scrum Master, Technical Coach. This is Piruin's personal blog.
+  Scrum Master, Technical Coach. This is Piruin's personal website.
 url: "https://piruin.me"
 logo: /image/logo.png
 
@@ -55,3 +55,4 @@ defaults:
     values:
       language: "en"
       layout: "default"
+      image: /image/logo.png
