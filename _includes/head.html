@@ -14,4 +14,14 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 {% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url=/">{% endif %}
+{% if page.url == "/" %}
+<style>
+  .hidden{ display: none; }
+  .visible{ animation: zoomIn 1s; -webkit-animation: zoomIn 1s; }
+  @keyframes zoomIn{
+    from {opacity: 0; transform: scale3d(.3, .3, .3);}
+    50% {opacity: 1;}
+  }
+</style>
+{% endif %}
 </head>
