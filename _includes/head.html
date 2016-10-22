@@ -2,18 +2,13 @@
 <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link type="text/css" rel="stylesheet" href="/css/materialize.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="/css/font-awesome.css" media="screen"/>
 {% feed_meta %}
-{% if page.layout == 'post' %}<link type="text/css" rel="stylesheet" href="/css/highlight.css" media="screen"/>{% endif %}
 {% seo title=false %}
 {% unless page.tags == empty %}<meta name="keywords" content="{{ page.tags | join: ',' }}"/>{% endunless %}
 <meta name="author" {% if page.author %}content="{{page.author}}" {% else %}content="{{ site.author }}" {% endif %}/>
 <meta name="robots" content="index, follow">
 {% include favicon.html %}
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+
 {% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url=/">{% endif %}
 {% if page.url == "/" %}
 <style>
@@ -25,4 +20,15 @@
   }
 </style>
 {% endif %}
+{% include preload-css.html href="/css/materialize.css" %}
+{% include preload-css.html href="/css/font-awesome.css" %}
+{% if page.layout == 'post' %}{% include preload-css.html href="/css/highlight.css" %}{% endif %}
+<script>
+{% include script/loadCSS.js %}
+{% include script/cssrelpreload.js %}
+</script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script></script><!-- here to ensure a non-blocking load still occurs in IE and Edge, even if scripts follow loadCSS in head -->
 </head>
