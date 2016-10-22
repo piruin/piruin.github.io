@@ -10,16 +10,10 @@
 {% include favicon.html %}
 
 {% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url=/">{% endif %}
-{% if page.url == "/" %}
-<style>
-  .hidden{ display: none; }
-  .visible{ animation: zoomIn 1s; -webkit-animation: zoomIn 1s; }
-  @keyframes zoomIn{
-    from {opacity: 0; transform: scale3d(.3, .3, .3);}
-    50% {opacity: 1;}
-  }
-</style>
-{% endif %}
+
+{% for style in page.inline-style %}<style>{% include {{ style }} %}</style>{% endfor %}
+{% for script in page.inline-script %}<script>{% include {{ script }} %}</script>{% endfor %}
+
 <link type="text/css" rel="stylesheet" href="/css/materialize.css" media="screen"/>
 {% include preload-css.html href="/css/font-awesome.css" %}
 {% if page.layout == 'post' %}{% include preload-css.html href="/css/highlight.css" %}{% endif %}
