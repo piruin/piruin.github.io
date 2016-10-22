@@ -39,6 +39,11 @@ gems:
 sass:
   style: compressed
 
+collections:
+  pages:
+    output: true
+    permalink: /:title/
+
 defaults:
   -
     scope:
