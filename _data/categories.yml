@@ -14,7 +14,7 @@ jekyll:
   name: Jekyll
   icon:
     type: image
-    path: /image/logo/jekyll-white.png
+    path: /image/logo/jekyll.png
 
 android:
   name: Android
