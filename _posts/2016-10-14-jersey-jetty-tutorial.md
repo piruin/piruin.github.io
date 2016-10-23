@@ -3,6 +3,7 @@ title: Tutorial RESTFul Service by Jersey and Jetty Embedding
 description: วิธีการสร้าง JSON RESTful Service  ด้วย Jersey + Jackson Media และ Embedded Jetty ทำการ Build ด้วย Gradle
 tags: ["Jersey", "Jetty", "RESTful"]
 lang: th
+category: java
 ---
 
 วันนี้เราจะ setup RESTFul service ด้วยการใช้ Jersey และ Jetty แบบ Embedded กันแบบง่ายๆ โดย Service ของเราสามารถคืน POJO เป็น เป็น JSON อัพโนมัติด้วย Jackson ได้ด้วย

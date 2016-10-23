@@ -5,3 +5,12 @@
 .smaller-text{
   font-size: 90%
 }
+
+.no-margin {
+  margin: 0;
+}
+
+.secondary-text{
+  @extend .smaller-text;
+  color: $secondary-text-color !important
+}

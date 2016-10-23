@@ -1,0 +1,23 @@
+general:
+  name: general
+  icon:
+    type: image
+    path: /image/logo.png
+
+java:
+  name: Java
+  icon:
+    type: image
+    path: /image/logo/java-white.png
+
+jekyll:
+  name: Jekyll
+  icon:
+    type: image
+    path: /image/logo/jekyll-white.png
+
+android:
+  name: Android
+  icon:
+    type: image
+    path: /image/logo/android-white.png
