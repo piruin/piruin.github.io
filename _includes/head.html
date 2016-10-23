@@ -13,7 +13,7 @@
 
 <link type="text/css" rel="stylesheet" href="/css/materialize.css" media="screen" />
 {% include preload-css.html href="/css/font-awesome.css" %}
-{% if page.layout == 'post' %}{% include preload-css.html href="/css/highlight.css" %}{% endif %}
+{% if page.layout == 'post' %}{% include preload-css.html href="/css/dracula.css" %}{% endif %}
 {% for style in page.inline-style %}<style>{% include {{ style }} %}</style>{% endfor %}
 {% for script in page.inline-script %}<script>{% include {{ script }} %}</script>{% endfor %}
 {% include load-css.html %}
