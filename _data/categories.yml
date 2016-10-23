@@ -7,8 +7,8 @@ general:
 java:
   name: Java
   icon:
-    type: image
-    path: /image/logo/java-white.png
+    type: font
+    class: devicon-java-plain red-text
 
 jekyll:
   name: Jekyll
@@ -19,5 +19,5 @@ jekyll:
 android:
   name: Android
   icon:
-    type: image
-    path: /image/logo/android-white.png
+    type: font
+    path: devicon-android-plain colored

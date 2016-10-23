@@ -33,9 +33,9 @@ inline-style:
       <article class="card hoverable">
         <div class="card-content row">
           <div class="col m10 s12">
-          <h3 class="no-margin card-title"><a href="{{ post.url }}">{{ post.title | escape }}</a></h3>
-          <time class="secondary-text" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time><br />
-          {% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | truncate: 200}}{% endif %}
+            <h3 class="no-margin card-title"><a href="{{ post.url }}">{{ post.title | escape }}</a></h3>
+            <time class="secondary-text" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time><br />
+            {% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | truncate: 200}}{% endif %}
           </div>
           <div class="col m2 s12 center-align">
             {% assign category = site.data.categories[post.category] %}
@@ -43,7 +43,7 @@ inline-style:
               <img style="padding:15px;max-height:100px;max-width:100px" class="responsive-img " src="{{ category.icon.path }}" alt="{{ category.name }}"/>
             {% endif %}
             {% if category.icon.type == 'font' %}
-              <i class="{{ category.icon.class }}}" title="{{ category.name }}" aria-hidden="true"></i>
+              <i class="{{ category.icon.class }}" style="font-size:5em" title="{{ category.name }}" aria-hidden="true"></i>
             {% endif %}
           </div>
           <div class="col s12 right-align secondary-text">
