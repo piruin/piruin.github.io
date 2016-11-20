@@ -4,9 +4,20 @@ article {
     border-bottom: 1px solid $primary-color-light;
   }
 
+  p {
+    margin: 25px 0;
+    line-height: 1.9;
+  }
+
+
   ul > li {
     list-style-type: disc;
     margin-left: 40px;
+  }
+
+  li {
+    margin-top: 15px;
+    margin-bottom: 15;
   }
 
   code {
@@ -51,4 +62,3 @@ article {
 .fb-share-button, .twitter-share-button {
     margin-right: 5px;
 }
-
