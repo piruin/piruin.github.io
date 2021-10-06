@@ -1,6 +1,4 @@
 # [piruin.github.io]
-[![Build Status](https://travis-ci.org/piruin/piruin.github.io.svg?branch=master)](https://travis-ci.org/piruin/piruin.github.io)
-[![Dependency Status](https://gemnasium.com/badges/github.com/piruin/piruin.github.io.svg)](https://gemnasium.com/github.com/piruin/piruin.github.io)
 
 My personal blog
 
